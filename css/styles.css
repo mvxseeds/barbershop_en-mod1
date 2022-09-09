@@ -1,0 +1,155 @@
+:root {
+    --page-white: #FFFFFF;
+    --page-accent: #FF6C00;
+    --text-tertiary: #9DA4BD;
+    --text-primary: #303030;
+    --text-secondary: #555555;
+    --bg-dark: #111319;
+    --bg-light_gray: #F7F7F7;
+    --overlay-dark: #191C26;
+
+    /* --overlay-dark + transparency; may be set as gradient later? */
+    --meta-light_gray: rgba(157, 164, 189, 0.6);
+    --hero-bg_dark: rgba(25, 28, 38, 0.2);
+}
+
+body {
+    background-color: var(--page-white);
+    color: var(--text-primary);
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button {
+    color: inherit;
+}
+
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* HEADER */
+
+/* remove after adding hero img + bg */
+.page-header {
+    background-color: var(--hero-bg_dark);
+}
+
+/* links don't inherit colors by default */
+.promo-links .link {
+    color: inherit;
+}
+
+.link {
+    color: var(--page-white);
+}
+
+.link:hover {
+    color: var(--page-accent);
+}
+
+.contact-us .button {
+    color: var(--page-white);
+}
+
+/* SECTIONS */
+
+/* hero */
+
+.hero {
+    background-color: var(--hero-bg_dark);
+}
+
+.hero .section-meta {
+    color: var(--meta-light_gray);
+}
+
+.hero .section-title {
+    color: var(--page-white);
+}
+
+
+/* about */
+
+.about .supportive-text,
+.about .description {
+    color: var(--text-secondary);
+}
+
+
+/* services */
+
+.services {
+    background-color: var(--bg-dark);
+}
+
+.services .section-meta {
+    color: var(--meta-light_gray);
+}
+
+.services .section-title {
+    color: var(--page-white);
+}
+
+.price.item p {
+    color: var(--text-tertiary);
+}
+
+.services .button {
+    color: var(--page-white);
+}
+
+
+/* advantages */
+
+.advantages .supportive-text {
+    color: var(--text-secondary);
+}
+
+.achievements.item sup {
+    color: var(--page-accent);
+}
+
+
+/* barbers */
+
+.barbers {
+    background-color: var(--bg-light_gray);
+}
+
+.card-set .specialty {
+    color: var(--page-accent);
+}
+
+
+/* portfolio */
+
+/* nothing here yet */
+
+
+/* footer */
+
+.page-footer {
+    background-color: var(--overlay-dark);
+}
+
+
+/* bad classes - review+change markup */
+.booking-title,
+.contacts-title,
+.contacts-meta {
+    color: var(--page-white);
+}
+
+.contacts.list address,
+.contacts.list .phone,
+.contacts.list .email,
+.page-footer .text {
+    color: var(--text-tertiary);
+}
+
+
+/* review+change markup */
+.copy-bar {
+    background-color: var(--bg-light_gray);
+}

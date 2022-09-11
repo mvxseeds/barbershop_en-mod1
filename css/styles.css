@@ -1,9 +1,13 @@
+/* variables container */
 :root {
+    --primary-font: 'Open Sans', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+
     --page-white: #FFFFFF;
     --page-accent: #FF6C00;
-    --text-tertiary: #9DA4BD;
-    --text-primary: #303030;
-    --text-secondary: #555555;
+    --tertiary-text-bg-dark: #9DA4BD;
+    --primary-text-bg-light: #303030;
+    --secondary-text-bg-light: #555555;
     --bg-dark: #111319;
     --bg-light_gray: #F7F7F7;
     --overlay-dark: #191C26;
@@ -13,19 +17,51 @@
     --hero-bg_dark: rgba(25, 28, 38, 0.2);
 }
 
+
+/* utils */
+
+/* text properties given to body generic for inheritance */
 body {
     background-color: var(--page-white);
-    color: var(--text-primary);
+    color: var(--primary-text-bg-light);
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--primary-font);
+    font-size: 11px;
+    line-height: 1.67;
 }
 
-.button {
+/* remove .btn if btn changed from anchor to button
+add cursor: pointer if changed */
+.link, .button {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+
+img {
+    /* removes inline text baseline */
+    display: block;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--page-accent);
+}
+
+.button.bg-light {
     color: inherit;
 }
 
+.button.bg-light:hover,
+.button.bg-light:focus {
+    color: var(--page-white);
+}
+
+
 h1, h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--secondary-font);
 }
 
 /* HEADER */
@@ -37,22 +73,72 @@ h1, h2 {
 
 /* links don't inherit colors by default */
 .promo-links .link {
+    font-weight: 600;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+
     color: inherit;
 }
 
-.link {
+.nav-link,
+.phone.link,
+.button {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+
     color: var(--page-white);
 }
 
-.link:hover {
+/* override above l-spacing */
+.button {
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.link:hover, 
+.link:focus {
     color: var(--page-accent);
 }
 
-.contact-us .button {
-    color: var(--page-white);
-}
 
 /* SECTIONS */
+
+/* section utils */
+.section-meta,
+.contacts-meta {
+    font-weight: 600;
+    line-height: 1.36;
+
+    text-transform: uppercase;
+}
+
+.section-title,
+.booking-title,
+.contacts-title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+}
+
+.supportive-text,
+.price.item p {
+    font-weight: 400;
+    font-size: 18px;
+
+    letter-spacing: 0.02em;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+}
+
+/* section specifics */
 
 /* hero */
 
@@ -65,7 +151,14 @@ h1, h2 {
 }
 
 .hero .section-title {
+    font-size: 72px;
+    line-height: 1.18;
+
     color: var(--page-white);
+}
+
+.hero .supportive-text {
+    color: var(--tertiary-text-bg-dark);
 }
 
 
@@ -73,8 +166,9 @@ h1, h2 {
 
 .about .supportive-text,
 .about .description {
-    color: var(--text-secondary);
+    color: var(--secondary-text-bg-light);
 }
+
 
 
 /* services */
@@ -92,7 +186,7 @@ h1, h2 {
 }
 
 .price.item p {
-    color: var(--text-tertiary);
+    color: var(--tertiary-text-bg-dark);
 }
 
 .services .button {
@@ -103,11 +197,31 @@ h1, h2 {
 /* advantages */
 
 .advantages .supportive-text {
-    color: var(--text-secondary);
+    color: var(--secondary-text-bg-light);
+}
+
+.achievements.item {
+    background-color: var(--bg-light_gray);
+}
+
+.number {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    letter-spacing: 0.05em;
 }
 
 .achievements.item sup {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.38;
+
     color: var(--page-accent);
+}
+
+.achievements.item .text {
+    font-weight: 600;
+    line-height: 1.36;
 }
 
 
@@ -119,6 +233,20 @@ h1, h2 {
 
 .card-set .specialty {
     color: var(--page-accent);
+}
+
+.card .name {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: 0.02em;
+}
+
+.card .specialty {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.36;
+    letter-spacing: 0.02em;
 }
 
 
@@ -145,9 +273,27 @@ h1, h2 {
 .contacts.list .phone,
 .contacts.list .email,
 .page-footer .text {
-    color: var(--text-tertiary);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+
+    color: var(--tertiary-text-bg-dark);
 }
 
+ .text.copy {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+
+    color: var(--tertiary-text-bg-dark);
+}
+
+.contacts.list address {
+    font-weight: 700;
+    font-style: normal;
+}
 
 /* review+change markup */
 .copy-bar {

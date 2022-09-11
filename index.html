@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
@@ -18,23 +18,32 @@
       <a href="./index.html" class="logo">
         <img src="./images/rawsvg/logo.svg" alt="Barbershop logo" width="69" />
       </a>
-      <nav class="nav-menu">
-        <ul class="nav-links">
-          <li><a href="#about-section" class="nav-link link">About</a></li>
-          <li><a href="#services-section" class="nav-link link">Services and prices</a></li>
-          <li><a href="#barbers-section" class="nav-link link">Barbers</a></li>
-          <li><a href="#contact-us" class="nav-link link">Contacts</a></li>
+      <nav class="page-nav">
+        <ul class="menu list">
+          <li class="menu-item">
+            <a href="#about-section" class="nav-link link">About</a>
+          </li>
+          <li class="menu-item">
+            <a href="#services-section" class="nav-link link">Services and prices</a>
+          </li>
+          <li class="menu-item">
+            <a href="#barbers-section" class="nav-link link">Barbers</a>
+          </li>
+          <li class="menu-item">
+            <a href="#contact-us" class="nav-link link">Contacts</a>
+          </li>
         </ul>
       </nav>
       <div class="contact-us">
         <a href="tel:+380441111111" class="phone link">+38 044 111 11 11</a>
+        <!-- if modal - change to button.type=button -->
         <a href="#" class="button">Online-booking</a>
       </div>
     </header>
 
     <main>
       <aside class="side-bar">
-        <ul class="promo-links">
+        <ul class="promo-links list">
           <li>
             <a href="https://instagram.com" class="link" target="_blank">Instagram</a>
           </li>
@@ -53,7 +62,7 @@
       </section>
 
       <section class="section about" id="about-section">
-        <ul>
+        <ul class="list">
           <li>
             <img src="./images/rawjpg/about-img-1.jpg" alt="Beard shaving" width="270" />
           </li>
@@ -73,7 +82,7 @@
           team that is always "on the same wave" with clients. Therefore, we are always ready to
           improve everyone who comes to us!
         </p>
-        <a href="#" class="button">ONLINE-BOOKING</a>
+        <a href="#" class="button bg-light">ONLINE-BOOKING</a>
       </section>
 
       <section class="section services" id="services-section">
@@ -229,9 +238,12 @@
         <h2 class="contacts-title">Contacts</h2>
         <ul class="contacts list">
           <li>
-            <address>st. Vasilkovaya, 7A Kiev, 08132</address>
+            <address>
+              st. Vasilkovaya, 7A<br />
+              Kiev, 08132
+            </address>
           </li>
-          <li><a href="tel:+380441111111" class="phone">+38 044 111 11 11</a></li>
+          <li><a href="tel:+380441111111" class="phone link">+38 044 111 11 11</a></li>
           <li><a href="mailto:barbershop@email.com" class="email">barbershop@email.com</a></li>
         </ul>
         <p class="contacts-meta">Working hours</p>
@@ -239,8 +251,8 @@
       </div>
       <!-- may be <aside> instead of <div> -->
       <div class="copy-bar">
-        <p class="text">&copy; Copyright 2020</p>
-        <ul class="promo-links">
+        <p class="text copy">&copy; Copyright 2020</p>
+        <ul class="promo-links list">
           <li>
             <a href="https://instagram.com" class="link" target="_blank">Instagram</a>
           </li>

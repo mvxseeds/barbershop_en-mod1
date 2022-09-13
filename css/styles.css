@@ -32,11 +32,14 @@ body {
 
 /* remove .btn if btn changed from anchor to button
 add cursor: pointer if changed */
-.link, .button {
+.link,
+.button {
     text-decoration: none;
 }
 
 .list {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -45,34 +48,82 @@ img {
     display: block;
 }
 
-.button:hover,
-.button:focus {
-    background-color: var(--page-accent);
+h1,
+h2,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.button.bg-light {
-    color: inherit;
-}
-
-.button.bg-light:hover,
-.button.bg-light:focus {
-    color: var(--page-white);
-}
-
-
-h1, h2 {
+h1,
+h2 {
     font-family: var(--secondary-font);
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1200px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* HEADER */
 
-/* remove after adding hero img + bg */
-.page-header {
-    background-color: var(--hero-bg_dark);
+.header {
+    padding: 32px 0;
+    background-color: #ccc;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.nav {
+    display: flex;
+}
+
+.logo {
+    fill: var(--primary-text-bg-light);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+
+    margin-left: 100px;
+}
+
+.nav-menu__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.header__contacts {
+    display: flex;
+    align-items: center;
+}
+
+.header__contacts .link {
+    margin-right: 40px;
 }
 
 /* links don't inherit colors by default */
-.promo-links .link {
+.promo-links__link {
     font-weight: 600;
     line-height: 1.36;
     letter-spacing: 0.2em;
@@ -80,58 +131,108 @@ h1, h2 {
     color: inherit;
 }
 
-.nav-link,
-.phone.link,
+.nav-menu__link,
+.header__contacts .link,
 .button {
     font-weight: 600;
     font-size: 12px;
-    line-height: 1.33;
+    line-height: 1.4;
     letter-spacing: 0.1em;
 
     color: var(--page-white);
 }
 
+.link:hover,
+.link:focus {
+    color: var(--page-accent);
+}
+
 /* override above l-spacing */
 .button {
+    display: block;
+
+    width: 160px;
+    height: 40px;
+    padding: 12px 18px;
+
+    border: 1px solid var(--page-accent);
+    border-radius: 25px;
+    text-align: center;
+
     letter-spacing: 0.09em;
     text-transform: uppercase;
 }
 
-.link:hover, 
-.link:focus {
-    color: var(--page-accent);
+.button:hover,
+.button:focus {
+    background-color: var(--page-accent);
+}
+
+.button--bg_light {
+    color: var(--primary-text-bg-light);
+}
+
+.button--bg_light:hover,
+.button--bg_light:focus {
+    color: var(--page-white);
 }
 
 
 /* SECTIONS */
 
 /* section utils */
-.section-meta,
-.contacts-meta {
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.section__meta,
+.contact-us__meta {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+
     font-weight: 600;
     line-height: 1.36;
 
     text-transform: uppercase;
 }
 
-.section-title,
+.section__meta::before {
+    /* horizontal decor element
+    block used for:
+    1) applying vertical geometries
+    2) positioning in a single line */
+    display: block;
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+
+    content: '';
+
+    background-color: var(--primary-text-bg-light);
+}
+
+.section__title,
 .booking-title,
-.contacts-title {
+.contact-us__title {
     font-weight: 700;
     font-size: 42px;
     line-height: 1.17;
     letter-spacing: 0.05em;
 }
 
-.supportive-text,
-.price.item p {
+.section__promotext,
+.price__item p {
     font-weight: 400;
     font-size: 18px;
 
     letter-spacing: 0.02em;
 }
 
-.description {
+.section__descr {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.86;
@@ -142,33 +243,83 @@ h1, h2 {
 
 /* hero */
 
-.hero {
-    background-color: var(--hero-bg_dark);
+.hero .container {
+    display: flex;
 }
 
-.hero .section-meta {
+.slider-overlay {
+    /* remove after adding img */
+    width: 1070px;
+    height: 680px;
+
+    padding-top: 272px;
+    padding-left: 100px;
+
+    background-color: var(--secondary-text-bg-light);
+    background-image: linear-gradient(to right, var(--hero-bg_dark), var(--hero-bg_dark)), url(../images/rawjpg/slider-img-3.jpg);
+    background-size: cover;
+
+    /* background-color: var(--hero-bg_dark); */
+
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column-reverse;
+
+    /* remove after editing section */
+    width: 130px;
+}
+
+.hero .section__meta {
     color: var(--meta-light_gray);
 }
 
-.hero .section-title {
+.hero .section__meta::before {
+    background-color: var(--meta-light_gray);
+}
+
+.hero .section__title {
     font-size: 72px;
     line-height: 1.18;
 
     color: var(--page-white);
 }
 
-.hero .supportive-text {
+.hero .section__promotext {
     color: var(--tertiary-text-bg-dark);
 }
 
 
 /* about */
 
-.about .supportive-text,
-.about .description {
+.about .container {
+    display: flex;
+}
+
+.about .section__wrapper {
+    margin-left: 30px;
+    max-width: 470px;
+}
+
+.preview {
+    display: flex;
+    gap: 30px;
+}
+
+.about .section__promotext,
+.about .section__title {
+    margin-bottom: 20px;
+}
+
+.about .section__promotext,
+.about .section__descr {
     color: var(--secondary-text-bg-light);
 }
 
+.about .section__descr {
+    margin-bottom: 42px;
+}
 
 
 /* services */
@@ -177,41 +328,112 @@ h1, h2 {
     background-color: var(--bg-dark);
 }
 
-.services .section-meta {
+.services .section__meta {
     color: var(--meta-light_gray);
 }
 
-.services .section-title {
+.services .section__meta::before {
+    background-color: var(--meta-light_gray);
+}
+
+.services .section__title {
+    margin-bottom: 44px;
+
     color: var(--page-white);
 }
 
-.price.item p {
+/* rebuild */
+.price {
+    display: flex;
+    column-gap: 30px;
+    flex-wrap: wrap;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 240px;
+}
+
+.price__item {
+    display: flex;
+    justify-content: space-between;
+
+    width: 570px;
+}
+
+.price__item p {
+    display: inline-block;
     color: var(--tertiary-text-bg-dark);
 }
 
 .services .button {
+    margin: auto;
     color: var(--page-white);
 }
 
 
 /* advantages */
 
-.advantages .supportive-text {
+.advantages .container {
+    display: flex;
+    gap: 30px;
+}
+
+.advantages .section__title {
+    max-width: 430px;
+    margin-bottom: 20px;
+}
+
+.advantages .section__promotext {
+    max-width: 500px;
     color: var(--secondary-text-bg-light);
 }
 
-.achievements.item {
+.achievements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 570px;
+
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.achievements__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 133px;
+
     background-color: var(--bg-light_gray);
 }
 
-.number {
+.achievements__item:nth-child(2n + 2) {
+    margin-top: 35px;
+}
+
+.achievements__item:nth-child(2n + 1) {
+    margin-right: 30px;
+}
+
+.achievements__count {
+    position: relative;
+    display: block;
+    margin-bottom: 6px;
+
     font-weight: 700;
     font-size: 42px;
     line-height: 1.36;
     letter-spacing: 0.05em;
 }
 
-.achievements.item sup {
+.achievements__item sup {
+    position: absolute;
+    top: 7px;
+    right: -13px;
+
     font-weight: 600;
     font-size: 16px;
     line-height: 1.38;
@@ -219,7 +441,11 @@ h1, h2 {
     color: var(--page-accent);
 }
 
-.achievements.item .text {
+.achievements__text {
+    display: inline-block;
+    max-width: 122px;
+    text-align: center;
+
     font-weight: 600;
     line-height: 1.36;
 }
@@ -231,48 +457,95 @@ h1, h2 {
     background-color: var(--bg-light_gray);
 }
 
-.card-set .specialty {
-    color: var(--page-accent);
+.barbers .section__title,
+.portfolio .section__meta {
+    margin-bottom: 44px;
 }
 
-.card .name {
+.barber-cards {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    text-align: center;
+}
+
+.card img {
+    margin-bottom: 30px;
+}
+
+.card__name {
+    margin-bottom: 8px;
+
     font-weight: 400;
     font-size: 18px;
     line-height: 1.39;
     letter-spacing: 0.02em;
 }
 
-.card .specialty {
+.card__spec {
+    margin-bottom: 30px;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 1.36;
     letter-spacing: 0.02em;
+
+    color: var(--page-accent);
 }
 
+.social-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-box__link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border-radius: 50%;
+
+    background-color: var(--page-white);
+}
+
+.social-box__icon {
+    fill: var(--primary-text-bg-light);
+}
+
+.social-box__link:hover .social-box__icon,
+.social-box__link:focus .social-box__icon {
+    fill: var(--page-accent);
+}
 
 /* portfolio */
 
-/* nothing here yet */
+.gallery {
+    display: flex;
+    gap: 30px;
+}
 
 
 /* footer */
 
-.page-footer {
+.footer {
     background-color: var(--overlay-dark);
 }
 
 
 /* bad classes - review+change markup */
 .booking-title,
-.contacts-title,
-.contacts-meta {
+.contact-us__title,
+.contact-us__meta {
     color: var(--page-white);
 }
 
-.contacts.list address,
-.contacts.list .phone,
-.contacts.list .email,
-.page-footer .text {
+.contacts address,
+.contacts .phone,
+.contacts .email,
+.contact-us__text {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.67;
@@ -281,7 +554,7 @@ h1, h2 {
     color: var(--tertiary-text-bg-dark);
 }
 
- .text.copy {
+.copy-bar__text {
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
@@ -290,7 +563,7 @@ h1, h2 {
     color: var(--tertiary-text-bg-dark);
 }
 
-.contacts.list address {
+.contacts address {
     font-weight: 700;
     font-style: normal;
 }

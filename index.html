@@ -5,47 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta card__name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbershop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css
-"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
         <nav class="nav">
           <a href="./index.html" class="logo">
-            <svg class="logo" width="69" height="55">
+            <svg class="logo__img" width="69" height="55">
               <use href="./images/svgsprite/icons.svg#logo"></use>
             </svg>
           </a>
-          <ul class="nav-menu list">
+          <ul class="nav-menu">
             <li class="nav-menu__item">
-              <a href="#about-section" class="nav-menu__link link">About</a>
+              <a href="#about-section" class="nav-menu__link">About</a>
             </li>
             <li class="nav-menu__item">
-              <a href="#services-section" class="nav-menu__link link">Services and prices</a>
+              <a href="#services-section" class="nav-menu__link">Services and prices</a>
             </li>
             <li class="nav-menu__item">
-              <a href="#barbers-section" class="nav-menu__link link">Barbers</a>
+              <a href="#barbers-section" class="nav-menu__link">Barbers</a>
             </li>
             <li class="nav-menu__item">
-              <a href="#contact-us" class="nav-menu__link link">Contacts</a>
+              <a href="#contact-us" class="nav-menu__link">Contacts</a>
             </li>
           </ul>
         </nav>
-        <div class="header__contacts">
-          <a href="tel:+380441111111" class="phone link">+38 044 111 11 11</a>
-          <!-- if modal - change to button.type=button -->
-          <a href="#" class="button">Online-booking</a>
+        <ul class="contacts">
+          <li class="contacts__item">          
+            <a href="tel:+380441111111" class="contacts__phone">+38 044 111 11 11</a>
+          </li>
+          <li class="contacts__item">          
+            <!-- if modal - change to button.type=button -->
+            <a href="#" class="button">Online-booking</a>
+          </li>
         </div>
       </div>
     </header>
@@ -54,14 +47,14 @@
       <section class="section hero">
         <div class="container">
           <aside class="side-bar">
-            <ul class="promo-links list">
+            <ul class="promo-links">
               <li class="promo-links__item">
-                <a href="https://instagram.com" class="promo-links__link link" target="_blank"
+                <a href="https://instagram.com" class="promo-links__link" target="_blank"
                   >Instagram</a
                 >
               </li>
               <li class="promo-links__item">
-                <a href="https://youtube.com" class="promo-links__link link" target="_blank"
+                <a href="https://youtube.com" class="promo-links__link" target="_blank"
                   >Youtube</a
                 >
               </li>
@@ -80,7 +73,7 @@
 
       <section class="section about" id="about-section">
         <div class="container">
-          <ul class="preview list">
+          <ul class="preview">
             <li class="preview__item">
               <img
                 src="./images/rawjpg/about-img-1.jpg"
@@ -111,7 +104,7 @@
               are a team that is always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <a href="#" class="button button--bg_light">ONLINE-BOOKING</a>
+            <a href="#" class="button--bg_light">ONLINE-BOOKING</a>
           </div>
         </div>
       </section>
@@ -120,7 +113,7 @@
         <div class="container">
           <p class="section__meta">Spend your time with the best masters</p>
           <h2 class="section__title">Services and prices</h2>
-          <ul class="price list">
+          <ul class="price">
             <li class="price__item">
               <p class="price__option">Men’s haircut</p>
               <p class="price__value">from 300 uah.</p>
@@ -160,7 +153,7 @@
 
       <section class="section advantages">
         <div class="container">
-          <ul class="achievements list">
+          <ul class="achievements">
             <li class="achievements__item">
               <!-- + at achievements__count can be done using inline-svg or :after -->
               <p class="achievements__count">600<sup>+</sup></p>
@@ -194,12 +187,12 @@
         <div class="container">
           <p class="section__meta">For true enjoyers of the atmosphere</p>
           <h2 class="section__title">Our barbers</h2>
-          <ul class="barber-cards list">
+          <ul class="barber-cards">
             <li class="card">
               <img src="./images/rawjpg/barbers-img-1.jpg" alt="Photo of John Smith" width="370" />
               <p class="card__name">John Smith</p>
               <p class="card__spec">Extreme Barber</p>
-              <ul class="social-box list">
+              <ul class="social-box">
                 <li class="social-box__item">
                   <a href="#" class="social-box__link">
                     <svg class="social-box__icon" width="20" height="20">
@@ -234,7 +227,7 @@
               <img src="./images/rawjpg/barbers-img-2.jpg" alt="Photo of Michele Doe" width="370" />
               <p class="card__name">Michele Doe</p>
               <p class="card__spec">Extreme Barber</p>
-              <ul class="social-box list">
+              <ul class="social-box">
                 <li class="social-box__item">
                   <a href="#" class="social-box__link">
                     <svg class="social-box__icon" width="20" height="20">
@@ -269,7 +262,7 @@
               <img src="./images/rawjpg/barbers-img-3.jpg" alt="Photo of Alan Black" width="370" />
               <p class="card__name">Alan Black</p>
               <p class="card__spec">Extreme Barber</p>
-              <ul class="social-box list">
+              <ul class="social-box">
                 <li class="social-box__item">
                   <a href="#" class="social-box__link">
                     <svg class="social-box__icon" width="20" height="20">
@@ -308,7 +301,7 @@
         <div class="container">
           <h2 class="section__title visually-hidden">Portfolio</h2>
           <p class="section__meta">In Latin, "barba" means "beard"</p>
-          <ul class="gallery list">
+          <ul class="gallery">
             <li class="gallery__item">
               <img src="./images/rawjpg/gallery-img-1.jpg" alt="Haircuts" width="270" />
             </li>
@@ -334,7 +327,7 @@
         </form>
         <div class="contact-us" id="contact-us">
           <h2 class="contact-us__title">Contacts</h2>
-          <ul class="contacts list">
+          <ul class="contacts footer__contacts">
             <li class="contacts__item">
               <address>
                 st. Vasilkovaya, 7A<br />
@@ -342,10 +335,10 @@
               </address>
             </li>
             <li class="contacts__item">
-              <a href="tel:+380441111111" class="phone link">+38 044 111 11 11</a>
+              <a href="tel:+380441111111" class="contacts__phone">+38 044 111 11 11</a>
             </li>
             <li class="contacts__item">
-              <a href="mailto:barbershop@email.com" class="email">barbershop@email.com</a>
+              <a href="mailto:barbershop@email.com" class="contacts__email">barbershop@email.com</a>
             </li>
           </ul>
           <p class="contact-us__meta">Working hours</p>
@@ -355,7 +348,7 @@
       <!-- may be <aside> instead of <div> -->
       <div class="copy-bar">
         <p class="copy-bar__text">&copy; Copyright 2020</p>
-        <ul class="promo-links list">
+        <ul class="promo-links">
           <li class="promo-links__item">
             <a href="https://instagram.com" class="promo-links__link link" target="_blank"
               >Instagram</a

@@ -1,0 +1,12 @@
+.portfolio {
+    & .section__meta {
+        margin-bottom: 44px;
+    }
+}
+
+.gallery {
+    @extend %list;
+
+    display: flex;
+    gap: 30px;
+}

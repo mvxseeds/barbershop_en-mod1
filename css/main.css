@@ -1,0 +1,784 @@
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+@import url(https://fonts.googleapis.com);
+@import url(https://fonts.gstatic.com);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap);
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+html {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+Sections
+========
+*/
+/**
+Remove the margin in all browsers.
+*/
+body {
+  margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/*
+Grouping content
+================
+*/
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* $overlay-dark + transparency; change to gradient if necessary */
+.social-box__link, .hero .promo-links__link, .nav-menu__link,
+.contacts__phone, .button--bg_light, .button, .logo {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__contacts, .gallery, .social-box, .barber-cards, .achievements, .price, .preview, .hero .promo-links, .contacts, .nav-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.button--bg_light, .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 40px;
+  border: 1px solid #FF6C00;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition: color 250ms ease, background-color 250ms ease;
+}
+.button--bg_light:hover, .button:hover, .button--bg_light:focus, .button:focus {
+  color: #FFFFFF;
+  background-color: #FF6C00;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #303030;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  line-height: 1.67;
+}
+
+img {
+  /* removes inline text baseline */
+  display: block;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+}
+
+.logo {
+  fill: #303030;
+}
+
+.button--bg_light {
+  color: #303030;
+}
+
+.header {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin-left: 130px;
+}
+
+.nav-menu__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__item {
+  margin-right: 40px;
+}
+.contacts__item:last-child {
+  margin-right: 20px;
+}
+
+.nav-menu__link,
+.contacts__phone {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  transition: color 250ms ease;
+}
+.nav-menu__link:hover, .nav-menu__link:focus,
+.contacts__phone:hover,
+.contacts__phone:focus {
+  color: #FF6C00;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section__meta,
+.contact-us__meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 1.36;
+  text-transform: uppercase;
+}
+.section__meta::before,
+.contact-us__meta::before {
+  /* horizontal decor element
+  block used for:
+  1) applying vertical geometries
+  2) positioning in a single line */
+  display: block;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+  content: "";
+  background-color: #303030;
+}
+
+.section__title,
+.booking-title,
+.contact-us__title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+
+.section__promotext,
+.price__item p {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+.section__descr {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+}
+
+.hero {
+  padding: 0;
+}
+.hero .container {
+  position: relative;
+}
+.hero .section__meta {
+  color: rgba(157, 164, 189, 0.6);
+}
+.hero .section__meta::before {
+  background-color: rgba(157, 164, 189, 0.6);
+}
+.hero .section__title {
+  font-size: 72px;
+  line-height: 1.18;
+  color: #FFFFFF;
+}
+.hero .section__promotext {
+  color: #9DA4BD;
+}
+.hero .promo-links {
+  display: flex;
+  align-items: center;
+}
+.hero .promo-links__item:first-child {
+  display: flex;
+  align-items: center;
+}
+.hero .promo-links__item:not(:last-child) {
+  margin-right: 40px;
+}
+.hero .promo-links__link {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+}
+.hero .promo-links__link:hover, .hero .promo-links__link:focus {
+  color: #FF6C00;
+}
+
+.promo-links__item:first-child::before {
+  /* horizontal decor element
+      block used for:
+      1) applying vertical geometries
+      2) positioning in a single line */
+  display: block;
+  width: 60px;
+  height: 1px;
+  margin-right: 40px;
+  content: "";
+  background-color: #303030;
+}
+
+/* remove after adding img */
+.slider-overlay {
+  width: 1070px;
+  height: 680px;
+  margin-left: auto;
+  padding-top: 272px;
+  padding-left: 100px;
+  background-color: #555555;
+  background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/rawjpg/slider-img-3.jpg);
+  background-size: cover;
+}
+
+.side-bar {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 33px;
+  padding-left: 40px;
+  width: 680px;
+  height: 100px;
+  transform-origin: left top;
+  transform: rotate(-90deg) translateX(-100%);
+}
+
+.about .container {
+  display: flex;
+}
+.about .section__wrapper {
+  margin-left: 30px;
+  max-width: 470px;
+}
+.about .section__promotext, .about .section__title {
+  margin-bottom: 20px;
+}
+.about .section__promotext, .about .section__descr {
+  color: #555555;
+}
+.about .section__descr {
+  margin-bottom: 42px;
+}
+
+.preview {
+  display: flex;
+  gap: 30px;
+}
+
+.services {
+  background-color: #111319;
+}
+.services .section__meta {
+  color: rgba(157, 164, 189, 0.6);
+}
+.services .section__meta::before {
+  background-color: rgba(157, 164, 189, 0.6);
+}
+.services .section__title {
+  margin-bottom: 44px;
+  color: #FFFFFF;
+}
+.services .button {
+  margin: auto;
+  color: #FFFFFF;
+}
+
+/* rebuild */
+.price {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 240px;
+}
+
+.price__item {
+  display: flex;
+  justify-content: space-between;
+  width: 570px;
+}
+
+.price__item p {
+  display: inline-block;
+  color: #9DA4BD;
+}
+
+.advantages .container {
+  display: flex;
+  gap: 30px;
+}
+.advantages .section__title {
+  max-width: 430px;
+  margin-bottom: 20px;
+}
+.advantages .section__promotext {
+  max-width: 500px;
+  color: #555555;
+}
+
+.achievements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-basis: 570px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.achievements__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 133px;
+  background-color: #F7F7F7;
+}
+.achievements__item:nth-child(2n+2) {
+  margin-top: 35px;
+}
+.achievements__item:nth-child(2n+1) {
+  margin-right: 30px;
+}
+
+.achievements__count {
+  position: relative;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  letter-spacing: 0.05em;
+}
+
+.achievements__item sup {
+  position: absolute;
+  top: 7px;
+  right: -13px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  color: #FF6C00;
+}
+
+.achievements__text {
+  display: inline-block;
+  max-width: 122px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+.barbers {
+  background-color: #F7F7F7;
+}
+.barbers .section__title {
+  margin-bottom: 44px;
+}
+
+.barber-cards {
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  text-align: center;
+}
+
+.card img {
+  margin-bottom: 30px;
+}
+
+.card__name {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.02em;
+}
+
+.card__spec {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+  color: #FF6C00;
+}
+
+.social-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-box__link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.social-box__icon {
+  fill: #303030;
+  transition: fill 250ms ease;
+}
+.social-box__link:hover .social-box__icon, .social-box__link:focus .social-box__icon {
+  fill: #FF6C00;
+}
+
+.portfolio .section__meta {
+  margin-bottom: 44px;
+}
+
+.gallery {
+  display: flex;
+  gap: 30px;
+}
+
+.footer {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-color: #191C26;
+}
+.footer .container {
+  display: flex;
+  gap: 30px;
+}
+
+.footer__contacts {
+  display: block;
+}
+.footer__contacts address, .footer__contacts .contacts__phone, .footer__contacts .contacts__email {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9DA4BD;
+}
+
+/* bad classes - review+change markup */
+.booking-title,
+.contact-us__title,
+.contact-us__meta {
+  color: #FFFFFF;
+}
+
+.footer__contacts address,
+.footer__contacts .phone,
+.footer__contacts .email,
+.contact-us__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9DA4BD;
+}
+
+.copy-bar__text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9DA4BD;
+}
+
+.footer__contacts address {
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* review+change markup */
+.copy-bar {
+  background-color: #F7F7F7;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,48 @@
+.services {
+    background-color: $bg-dark;
+
+    & .section__meta {
+            color: $meta-light_gray;
+
+            &::before {
+                    background-color: $meta-light_gray;
+                }
+        }
+
+    & .section__title {
+        margin-bottom: 44px;
+    
+        color: $page-white;
+    }
+
+    & .button {
+        margin: auto;
+        color: $page-white;
+    }
+}
+
+
+/* rebuild */
+.price {
+    @extend %list;
+    
+    display: flex;
+    column-gap: 30px;
+    flex-wrap: wrap;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 240px;
+}
+
+.price__item {
+    display: flex;
+    justify-content: space-between;
+
+    width: 570px;
+}
+
+.price__item p {
+    display: inline-block;
+    color: $tertiary-text-bg-dark;
+}

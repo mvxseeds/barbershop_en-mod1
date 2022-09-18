@@ -1,0 +1,71 @@
+.barbers {
+    background-color: $bg-light_gray;
+
+    & .section__title {
+            margin-bottom: 44px;
+        }
+}
+
+.barber-cards {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    text-align: center;
+}
+
+.card img {
+    margin-bottom: 30px;
+}
+
+.card__name {
+    margin-bottom: 8px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: 0.02em;
+}
+
+.card__spec {
+    margin-bottom: 30px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.36;
+    letter-spacing: 0.02em;
+
+    color: $page-accent;
+}
+
+
+.social-box {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-box__link {
+    @extend %link;
+
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border-radius: 50%;
+
+    background-color: $page-white;
+}
+
+.social-box__icon {
+    fill: $primary-text-bg-light;
+    transition: fill $transition-dur_n_func;
+
+    .social-box__link:hover &,
+    .social-box__link:focus & {
+        fill: $page-accent;
+    }
+}

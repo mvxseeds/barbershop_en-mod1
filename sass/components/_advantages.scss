@@ -1,0 +1,81 @@
+.advantages {
+    & .container {
+            display: flex;
+            gap: 30px;
+        }
+
+    & .section__title {
+        max-width: 430px;
+        margin-bottom: 20px;
+    }
+
+    & .section__promotext {
+        max-width: 500px;
+        color: $secondary-text-bg-light;
+    }
+}
+
+
+.achievements {
+    @extend %list;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 570px;
+
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.achievements__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 133px;
+
+    background-color: $bg-light_gray;
+
+    &:nth-child(2n + 2) {
+        margin-top: 35px;
+    }
+
+    &:nth-child(2n + 1) {
+        margin-right: 30px;
+    }
+}
+
+.achievements__count {
+    position: relative;
+    display: block;
+    margin-bottom: 6px;
+
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    letter-spacing: 0.05em;
+}
+
+.achievements__item sup {
+    position: absolute;
+    top: 7px;
+    right: -13px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.38;
+
+    color: $page-accent;
+}
+
+.achievements__text {
+    display: inline-block;
+    max-width: 122px;
+    text-align: center;
+
+    font-weight: 600;
+    line-height: 1.36;
+}

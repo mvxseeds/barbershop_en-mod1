@@ -1,0 +1,69 @@
+// actual placeholders
+%link {
+    text-decoration: none;
+    color: inherit;
+}
+
+%list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+%button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 160px;
+    height: 40px;
+
+
+    border: 1px solid $page-accent;
+    border-radius: 25px;
+    text-align: center;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    color: $page-white;
+
+    transition: color $transition-dur_n_func, background-color $transition-dur_n_func;
+    
+    &:hover,
+    &:focus {
+        color: $page-white;
+        background-color: $page-accent;
+    }
+}
+
+
+// resets + inheritance styles
+body {
+    background-color: $page-white;
+    color: $primary-text-bg-light;
+
+    font-family: $primary-font;
+    font-size: 11px;
+    line-height: 1.67;
+}
+
+img {
+    /* removes inline text baseline */
+    display: block;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1,
+h2 {
+    font-family: $secondary-font;
+}

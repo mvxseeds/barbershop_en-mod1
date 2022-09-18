@@ -1,0 +1,66 @@
+.footer {
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    background-color: $overlay-dark;
+
+    & .container {
+        display: flex;
+        gap: 30px;
+    }
+}
+
+// edit markup + remove
+.footer__contacts {
+    @extend %list;
+    display: block;
+
+    & address,
+    & .contacts__phone,
+    & .contacts__email {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.67;
+        letter-spacing: 0.02em;
+
+        color: $tertiary-text-bg-dark;
+    }
+}
+
+/* bad classes - review+change markup */
+.booking-title,
+.contact-us__title,
+.contact-us__meta {
+    color: $page-white;
+}
+
+.footer__contacts address,
+.footer__contacts .phone,
+.footer__contacts .email,
+.contact-us__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+
+    color: $tertiary-text-bg-dark;
+}
+
+.copy-bar__text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+
+    color: $tertiary-text-bg-dark;
+}
+
+.footer__contacts address {
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* review+change markup */
+.copy-bar {
+    background-color: $bg-light_gray;
+}

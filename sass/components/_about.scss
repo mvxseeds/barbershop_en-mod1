@@ -1,0 +1,31 @@
+.about {
+    & .container {
+            display: flex;
+        }
+
+    & .section__wrapper {
+        margin-left: 30px;
+        max-width: 470px;
+    }
+
+    & .section__promotext,
+    & .section__title {
+        margin-bottom: 20px;
+    }
+
+    & .section__promotext,
+    & .section__descr {
+        color: $secondary-text-bg-light;
+    }
+
+    & .section__descr {
+        margin-bottom: 42px;
+    }
+}
+
+
+.preview {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+}

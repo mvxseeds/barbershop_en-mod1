@@ -1,0 +1,10 @@
+.button {
+    @extend %button;
+    @extend %link;
+
+    &--bg_light {
+        @extend %button;
+        @extend %link;
+        color: $primary-text-bg-light;
+    }
+}

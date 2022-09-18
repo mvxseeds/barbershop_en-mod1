@@ -1,0 +1,4 @@
+.logo {
+    @extend %link;
+    fill: $primary-text-bg-light;
+}

@@ -1,0 +1,24 @@
+// fonts
+@import url(https://fonts.googleapis.com);
+@import url(https://fonts.gstatic.com);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap);
+
+$primary_font: 'Open Sans', sans-serif;
+$secondary_font: 'Raleway', sans-serif;
+
+// colors
+$page-white: #FFFFFF;
+$page-accent: #FF6C00;
+$primary-text-bg-light: #303030;
+$secondary-text-bg-light: #555555;
+$tertiary-text-bg-dark: #9DA4BD;
+$bg-dark: #111319;
+$bg-light_gray: #F7F7F7;
+$overlay-dark: #191C26;
+
+/* $overlay-dark + transparency; change to gradient if necessary */
+$meta-light_gray: rgba(157, 164, 189, 0.6);
+$hero-bg_dark: rgba(25, 28, 38, 0.2);
+
+// animations
+$transition-dur_n_func: 250ms ease;

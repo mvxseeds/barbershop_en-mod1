@@ -2,6 +2,12 @@
     padding: 0;
 
     & .container {
+            @media screen and (max-width: 767px) {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
             position: relative;
         }
 
@@ -80,32 +86,53 @@
 
 /* remove after adding img */
 .slider-overlay {
-    width: 1070px;
-    height: 680px;
-
-    margin-left: auto;
-    padding-top: 272px;
-    padding-left: 100px;
+    padding-top: 208px;
+    padding-bottom: 209px;
 
     background-color: $secondary-text-bg-light;
     background-image: linear-gradient(to right, $hero-bg_dark, $hero-bg_dark), url(../images/rawjpg/slider-img-3.jpg);
     background-size: cover;
+
+    @media screen and (min-width: 768px) {
+        margin-left: auto;
+
+        max-width: 570px;
+        max-height: 680px;
+
+        padding-top: 272px;
+        padding-bottom: 237px;
+        // back + fwd (details below)
+        padding-left: 120px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 1070px;
+
+        padding-top: 272px;
+        padding-bottom: 208px;
+        // add "Back" + "Fwd" btns for slider; change pbottom to 40px
+        padding-left: 100px;
+    }
 }
 
 
 .side-bar {
-    position: absolute;
-
-    display: flex;
-    align-items: flex-end;
-
-    padding-bottom: 33px;
-    padding-left: 40px;
-
-    width: 680px;
-    height: 100px;
-
-    // specifies the rotation point
-    transform-origin: left top;
-    transform: rotate(-90deg) translateX(-100%); 
+    display: none;
+    
+    @media screen and (min-width: 768px) {
+        position: absolute;
+    
+        display: flex;
+        align-items: flex-end;
+    
+        padding-bottom: 33px;
+        padding-left: 40px;
+    
+        width: 680px;
+        height: 100px;
+    
+        // specifies the rotation point
+        transform-origin: left top;
+        transform: rotate(-90deg) translateX(-100%);
+    }
 }

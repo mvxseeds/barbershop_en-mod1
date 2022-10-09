@@ -1,4 +1,9 @@
 .logo {
     @extend %link;
+
+    @media screen and (max-width: 767px) {
+        fill: $page-white;
+    }
+
     fill: $primary-text-bg-light;
 }

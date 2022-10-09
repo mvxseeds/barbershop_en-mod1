@@ -30,6 +30,9 @@
     text-transform: uppercase;
 
     color: $page-white;
+    // styles for button.type=button
+    // background-color: transparent;
+    // cursor: pointer;
 
     transition: color $transition-dur_n_func, background-color $transition-dur_n_func;
     

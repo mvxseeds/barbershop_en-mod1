@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta card__name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbershop</title>
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
@@ -321,43 +321,49 @@
 
     <footer class="footer">
       <div class="container">
-        <!-- form + contacts may be organized into distinct section -->
-        <form>
+        <section class="section booking">
           <h2 class="booking-title">Online-booking</h2>
-        </form>
-        <div class="contact-us" id="contact-us">
-          <h2 class="contact-us__title">Contacts</h2>
-          <ul class="contacts footer__contacts">
-            <li class="contacts__item">
-              <address>
-                st. Vasilkovaya, 7A<br />
-                Kiev, 08132
-              </address>
-            </li>
-            <li class="contacts__item">
-              <a href="tel:+380441111111" class="contacts__phone">+38 044 111 11 11</a>
-            </li>
-            <li class="contacts__item">
-              <a href="mailto:barbershop@email.com" class="contacts__email">barbershop@email.com</a>
-            </li>
-          </ul>
-          <p class="contact-us__meta">Working hours</p>
-          <p class="contact-us__text">Every day from 9:00 to 22:00</p>
-        </div>
+          <!-- form + contacts may be organized into distinct section -->
+          <form>
+          </form>
+        </section>
+        <section class="contact-us">
+          <div class="contact-us" id="contact-us">
+            <h2 class="contact-us__title">Contacts</h2>
+            <ul class="contacts footer__contacts">
+              <li class="contacts__item">
+                <address>
+                  st. Vasilkovaya, 7A<br />
+                  Kiev, 08132
+                </address>
+              </li>
+              <li class="contacts__item">
+                <a href="tel:+380441111111" class="contacts__phone">+38 044 111 11 11</a>
+              </li>
+              <li class="contacts__item">
+                <a href="mailto:barbershop@email.com" class="contacts__email">barbershop@email.com</a>
+              </li>
+            </ul>
+            <p class="contact-us__meta">Working hours</p>
+            <p class="contact-us__text">Every day from 9:00 to 22:00</p>
+          </div>
+        </section>
       </div>
       <!-- may be <aside> instead of <div> -->
-      <div class="copy-bar">
-        <p class="copy-bar__text">&copy; Copyright 2020</p>
-        <ul class="promo-links">
-          <li class="promo-links__item">
-            <a href="https://instagram.com" class="promo-links__link link" target="_blank"
-              >Instagram</a
-            >
-          </li>
-          <li class="promo-links__item">
-            <a href="https://youtube.com" class="promo-links__link link" target="_blank">Youtube</a>
-          </li>
-        </ul>
+      <div class="container">
+        <div class="copy-bar">
+          <p class="copy-bar__text">&copy; Copyright 2020</p>
+          <ul class="promo-links">
+            <li class="promo-links__item">
+              <a href="https://instagram.com" class="promo-links__link link" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li class="promo-links__item">
+              <a href="https://youtube.com" class="promo-links__link link" target="_blank">Youtube</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
